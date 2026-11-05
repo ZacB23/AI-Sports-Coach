@@ -1,0 +1,48 @@
+# --- Secrets: never commit ---
+.env
+.env.*
+!.env.example
+
+# --- Rowing footage and pipeline outputs: never commit ---
+# Raw video lives only in footage/ on your own Mac.
+footage/*
+!footage/README.md
+data/*
+!data/README.md
+web/public/dev/
+
+# Belt and braces: no video files anywhere in the repo
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.m4v
+*.avi
+*.mkv
+*.webm
+*.wav
+*.m4a
+
+# --- Python ---
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Node / web ---
+node_modules/
+web/dist/
+
+# --- Models (big downloads, re-fetch instead) ---
+*.onnx
+*.task
+*.pt
+*.safetensors
+*.gguf
+
+# --- Mac / editors ---
+.DS_Store
+.vscode/
+.idea/
